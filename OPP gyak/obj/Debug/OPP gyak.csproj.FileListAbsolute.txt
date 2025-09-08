@@ -1,0 +1,7 @@
+U:\Backend 13.b\OPP gyak\bin\Debug\OPP gyak.exe.config
+U:\Backend 13.b\OPP gyak\bin\Debug\OPP gyak.exe
+U:\Backend 13.b\OPP gyak\bin\Debug\OPP gyak.pdb
+U:\Backend 13.b\OPP gyak\obj\Debug\OPP gyak.csproj.AssemblyReference.cache
+U:\Backend 13.b\OPP gyak\obj\Debug\OPP gyak.csproj.CoreCompileInputs.cache
+U:\Backend 13.b\OPP gyak\obj\Debug\OPP gyak.exe
+U:\Backend 13.b\OPP gyak\obj\Debug\OPP gyak.pdb
