@@ -8,8 +8,8 @@ namespace OPP_gyak
 {
     public class Szemely
     {
-        string nev;
-        int eletkor;
+        public string nev;
+        public int eletkor;
 
         public Szemely(string nev, int eletkor)
         {
