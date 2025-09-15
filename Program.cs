@@ -32,8 +32,8 @@ namespace OPP_gyak
 
         //public Szemely(string Nev, int Eletkor)
         //{
-        //    this.nev = Nev;
-        //    this.eletkor = Eletkor;
+        //    this._nev = Nev;
+        //    this._eletkor = Eletkor;
         //}
         //public string Kiir()
         //{
@@ -86,6 +86,17 @@ namespace OPP_gyak
         }
 
     }
+    public class Dolgozo : Szemely
+    {
+        private int _ber;
+
+        public override string ToString()
+        {
+            _nev = "Ilona";
+            return $"A dolgozó neve {_nev}";
+        }
+
+    }
     internal class Program
     {
         static void Main(string[] args)
@@ -118,6 +129,9 @@ namespace OPP_gyak
             {
                 Console.WriteLine(item.Nev);
             }
+
+            Dolgozo worker = new Dolgozo();
+            Console.WriteLine(worker); 
             //Console.WriteLine($"Személy neve: {szemely.Nev} és {szemely.Eletkor} éves");
             Console.ReadKey();
         }
