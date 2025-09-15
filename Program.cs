@@ -8,26 +8,49 @@ namespace OPP_gyak
 {
     public class Szemely
     {
-        private string nev;
-        private int eletkor;
+        private string _nev;
+        private int _eletkor;
 
-        public Szemely(string Nev, int Eletkor)
-        {
-            this.nev = Nev;
-            this.eletkor = Eletkor;
+        public string Nev {
+            get { return _nev; }
+            set { _nev = value; } 
         }
-        public string Kiir()
+        public int Eletkor
         {
-            return $"Személy neve: {nev} és életkora: {eletkor}";
+            get { return _eletkor; }
+            set
+            {
+                if(value > 0) 
+                    _eletkor = value;
+            }
         }
+
+        public override string ToString()
+        {
+            return $"A személy neve {Nev} életkora: {Eletkor}";
+        }
+
+        //public Szemely(string Nev, int Eletkor)
+        //{
+        //    this.nev = Nev;
+        //    this.eletkor = Eletkor;
+        //}
+        //public string Kiir()
+        //{
+        //    return $"Személy neve: {nev} és életkora: {eletkor}";
+        //}
     }   
     internal class Program
     {
         static void Main(string[] args)
         {
-            Szemely person = new Szemely("Ilona", 31);
-            Console.WriteLine(person.Kiir());
-
+            //Szemely person = new Szemely("Ilona", 31);
+            //Console.WriteLine(person.Kiir());
+            Szemely szemely = new Szemely();
+            szemely.Nev = "Kis Ilona";
+            szemely.Eletkor = 33;
+            Console.WriteLine(szemely);
+            //Console.WriteLine($"Személy neve: {szemely.Nev} és {szemely.Eletkor} éves");
             Console.ReadKey();
         }
     }
