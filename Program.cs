@@ -70,6 +70,16 @@ namespace OPP_gyak
     {
         private string _neptunKod;
 
+        public string Neptunkod{
+            get { return _neptunKod; }
+            set
+            {
+                if (value.Length <= 6)
+                    _neptunKod = value;
+                else
+                    Console.WriteLine("A neptunkód nem lehet hosszabb 6 karakternél.");
+            }
+        }
         public override string ToString()
         {
             return $"A hallgató neve {_nev}.";
