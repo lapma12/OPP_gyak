@@ -39,7 +39,7 @@ namespace OPP_gyak
         //{
         //    return $"Személy neve: {nev} és életkora: {eletkor}";
         //}
-    }   
+    }
     public class Bankszamla
     {
         private int _egyenleg;
@@ -47,11 +47,12 @@ namespace OPP_gyak
         public int Egyenleg
         {
             get { return _egyenleg; }
-            set {
-                if(value > 0)
+            set
+            {
+                if (value > 0)
                     _egyenleg = value;
                 else
-                    Console.WriteLine("Egyenleg nem lethet nulla4!");
+                    Console.WriteLine("Egyenleg nem lethet nulla!!");
             }
         }
 
@@ -63,6 +64,12 @@ namespace OPP_gyak
         {
 
         }
+    }
+    public class Hallgato : Szemely
+    {
+        private string _neptunKod;
+
+    }
     internal class Program
     {
         static void Main(string[] args)
