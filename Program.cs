@@ -8,7 +8,7 @@ namespace OPP_gyak
 {
     public class Szemely
     {
-        private string _nev;
+        protected string _nev;
         private int _eletkor;
 
         public string Nev {
@@ -44,6 +44,7 @@ namespace OPP_gyak
     {
         private int _egyenleg;
 
+
         public int Egyenleg
         {
             get { return _egyenleg; }
@@ -56,18 +57,23 @@ namespace OPP_gyak
             }
         }
 
-        public int Betesz()
-        {
+        //public int Betesz()
+        //{
 
-        }
-        public int Kivesz()
-        {
+        //}
+        //public int Kivesz()
+        //{
 
-        }
+        //}
     }
     public class Hallgato : Szemely
     {
         private string _neptunKod;
+
+        public override string ToString()
+        {
+            return $"A hallgató neve {_nev}.";
+        }
 
     }
     internal class Program
@@ -76,10 +82,17 @@ namespace OPP_gyak
         {
             //Szemely person = new Szemely("Ilona", 31);
             //Console.WriteLine(person.Kiir());
+
             Szemely szemely = new Szemely();
-            szemely.Nev = "Kis Ilona";
+            szemely.Nev = "Kis János";
             szemely.Eletkor = 33;
             Console.WriteLine(szemely);
+
+
+            Hallgato student = new Hallgato();
+            student.Nev = "Gábor";
+            Console.WriteLine(student);
+
             //Console.WriteLine($"Személy neve: {szemely.Nev} és {szemely.Eletkor} éves");
             Console.ReadKey();
         }
